@@ -71,3 +71,11 @@ WHERE j.Salary > (
     SELECT AVG(Salary)
     FROM Jobs
 );
+
+18. SELECT 
+    JobTitle, 
+    CompanyID, 
+    JobLocation, 
+    Salary
+FROM Jobs
+WHERE JobTitle LIKE '%Developer%' OR JobTitle LIKE '%Engineer%';
