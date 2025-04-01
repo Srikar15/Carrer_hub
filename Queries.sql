@@ -79,3 +79,25 @@ WHERE j.Salary > (
     Salary
 FROM Jobs
 WHERE JobTitle LIKE '%Developer%' OR JobTitle LIKE '%Engineer%';
+
+
+
+-- Insert into Companies
+INSERT INTO Companies (CompanyName, Location) 
+VALUES ('Tech Solutions', 'New York'), 
+       ('Innovatech', 'San Francisco');
+
+-- Insert into Jobs
+INSERT INTO Jobs (CompanyID, JobTitle, JobDescription, JobLocation, Salary, JobType) 
+VALUES (1, 'Software Engineer', 'Develop and maintain software applications.', 'New York', 90000.00, 'Full-Time'), 
+       (2, 'Data Analyst', 'Analyze data to drive business insights.', 'San Francisco', 75000.00, 'Full-Time');
+
+-- Insert into Applicants
+INSERT INTO Applicants (FirstName, LastName, Email, Phone, Resume) 
+VALUES ('Alice', 'Johnson', 'alice.johnson@email.com', '123-456-7890', 'Resume of Alice'), 
+       ('Bob', 'Smith', 'bob.smith@email.com', '987-654-3210', 'Resume of Bob');
+
+-- Insert into Applications
+INSERT INTO Applications (JobID, ApplicantID, CoverLetter) 
+VALUES (1, 1, 'I am excited to apply for the Software Engineer position at Tech Solutions.'), 
+       (2, 2, 'I am interested in the Data Analyst role at Innovatech.');
