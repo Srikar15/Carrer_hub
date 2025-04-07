@@ -33,3 +33,56 @@
  FOREIGN KEY (JobID) REFERENCES Jobs(JobID) ON DELETE CASCADE,
  FOREIGN KEY (ApplicantID) REFERENCES Applicants(ApplicantID) ON DELETE CASCADE
  );
+
+
+INSERT INTO Companies (CompanyName, Location) VALUES
+('TechNova Solutions', 'Bangalore'),
+('InnovateX Corp', 'Hyderabad'),
+('GreenByte Ltd', 'Chennai'),
+('NextGen Systems', 'Pune'),
+('AlphaSoft Technologies', 'Delhi'),
+('CyberCore Inc', 'Mumbai'),
+('VisionWare Pvt Ltd', 'Noida'),
+('QuantumLeap Tech', 'Kolkata'),
+('PixelEdge Studios', 'Ahmedabad'),
+('NovaWorks India', 'Jaipur');
+
+
+INSERT INTO Jobs (CompanyID, JobTitle, JobDescription, JobLocation, Salary, JobType) VALUES
+(1, 'Software Engineer', 'Develop and maintain web applications.', 'Bangalore', 750000.00, 'Full-Time'),
+(2, 'Data Analyst', 'Analyze datasets to extract insights.', 'Hyderabad', 600000.00, 'Full-Time'),
+(3, 'UI/UX Designer', 'Design user-friendly interfaces.', 'Chennai', 550000.00, 'Contract'),
+(4, 'DevOps Engineer', 'Manage deployment pipelines and infrastructure.', 'Pune', 800000.00, 'Full-Time'),
+(5, 'Project Manager', 'Oversee project execution and delivery.', 'Delhi', 900000.00, 'Full-Time'),
+(6, 'Technical Support Specialist', 'Provide tech support to customers.', 'Mumbai', 400000.00, 'Part-Time'),
+(7, 'Mobile App Developer', 'Create and manage Android/iOS applications.', 'Noida', 720000.00, 'Full-Time'),
+(8, 'QA Tester', 'Test software products for bugs and issues.', 'Kolkata', 500000.00, 'Internship'),
+(9, 'System Administrator', 'Maintain IT systems and networks.', 'Ahmedabad', 650000.00, 'Full-Time'),
+(10, 'Content Writer', 'Create and edit technical content.', 'Jaipur', 450000.00, 'Freelance');
+
+
+INSERT INTO Applicants (FirstName, LastName, Email, Phone, Resume) VALUES
+('Aarav', 'Sharma', 'aarav.sharma@example.com', '9876543210', 'Resume content for Aarav Sharma.'),
+('Meera', 'Iyer', 'meera.iyer@example.com', '8765432109', 'Resume content for Meera Iyer.'),
+('Rohan', 'Patel', 'rohan.patel@example.com', '7654321098', 'Resume content for Rohan Patel.'),
+('Divya', 'Nair', 'divya.nair@example.com', '6543210987', 'Resume content for Divya Nair.'),
+('Karan', 'Verma', 'karan.verma@example.com', '5432109876', 'Resume content for Karan Verma.'),
+('Sneha', 'Reddy', 'sneha.reddy@example.com', '4321098765', 'Resume content for Sneha Reddy.'),
+('Aditya', 'Singh', 'aditya.singh@example.com', '3210987654', 'Resume content for Aditya Singh.'),
+('Priya', 'Mishra', 'priya.mishra@example.com', '2109876543', 'Resume content for Priya Mishra.'),
+('Vikram', 'Das', 'vikram.das@example.com', '1098765432', 'Resume content for Vikram Das.'),
+('Isha', 'Kulkarni', 'isha.kulkarni@example.com', '9988776655', 'Resume content for Isha Kulkarni.');
+
+
+
+INSERT INTO Applications (JobID, ApplicantID, CoverLetter) VALUES
+(1, 1, 'I am excited to apply for the Software Engineer role.'),
+(2, 2, 'I have a strong background in data analytics and visualization.'),
+(3, 3, 'Passionate about UI/UX and eager to contribute to your design team.'),
+(4, 4, 'Experienced in cloud deployment and DevOps practices.'),
+(5, 5, 'Skilled in project management and team leadership.'),
+(6, 6, 'Customer-focused and tech-savvy support professional.'),
+(7, 7, 'Proficient in mobile app development with Flutter and React Native.'),
+(8, 8, 'Detail-oriented tester with hands-on experience in automation.'),
+(9, 9, 'Reliable system admin with experience in Linux and Windows environments.'),
+(10, 10, 'Creative writer with a passion for tech content and blogs.');
